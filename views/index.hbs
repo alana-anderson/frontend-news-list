@@ -1,0 +1,30 @@
+{{!< layout}}
+  <h1>{{title}}</h1>
+
+
+<table class="table table-bordered table-hover" id="dataTable">
+	<thead>
+	    <tr>
+	        <th>Unpublished Articles ()</th>
+	        <th>Author</th>
+	        <th>Words</th>
+	        <th>Submitted</th>
+	    </tr>
+	</thead>
+	 <tbody>
+	 	{{#each this}}
+	 	<tr id="tr-id-1" class="tr-class-1">
+	 		<td>
+	 			{{image}}
+ 			</td>
+ 			<td>{{title}}</td>
+ 			<td> {{#profile}}
+                            <p>{{first_name}} at {{last_name}}</p>
+                {{/#profile}}
+            </td>
+ 			<td>{{words}}</td>
+ 			<td>{{publish_at}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
