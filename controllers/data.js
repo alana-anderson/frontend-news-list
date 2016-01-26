@@ -5,15 +5,13 @@ var articles = [];
 
 // get article list
 function getJsonArticles() {
-	var articleData = JSON.parse(jsonData);
-	articleData.data.children.forEach(function(child) {
-		// check if belongs to mechmarket selling
-			var title = child.data.title,
-			image = child.data.image,
-			url = child.data.url,
-			publish_at = child.data.publish_at,
-			profile =  child.data.profile,
-			words = child.data.words;
+		jsonData.forEach(function(data){
+		var title = data.title,
+			image = data.image,
+			url = data.url,
+			publish_at = data.publish_at,
+			profile =  data.profile,
+			words = data.words;
 
 			// push new item into array 
 			var item = new article(title, image, url, publish_at, profile, words);

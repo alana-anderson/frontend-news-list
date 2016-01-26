@@ -1,6 +1,5 @@
 (function ($) {
   $(document).ready(function () {
-	console.log('hey');
-
+    console.log('hey');
   });
 })(jQuery);

@@ -90,7 +90,7 @@ gulp.task('watch', function () {
   gulp.watch(paths.client, ['buildJs']);
   gulp.watch('./public/less/**/*.less', ['buildCss']);
   gulp
-    .src(['./views/**/*.hbs', './public/css/**/*.min.css', './public/js/**/*.min.js'])
+    .src(['./views/**/*.ejs', './public/css/**/*.min.css', './public/js/**/*.min.js'])
     .pipe(watch())
     .pipe(livereload());
 });

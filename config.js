@@ -4,7 +4,7 @@ var config = {
       port: 3000,
     },
     database: {
-      url: 'mongodb://localhost/frontend-test_dev'
+      url: 'mongodb://localhost/frontend-dev_dev'
     }
   },
   testing: {
@@ -12,7 +12,7 @@ var config = {
       port: 3001
     },
     database: {
-      url: 'mongodb://localhost/frontend-test_test'
+      url: 'mongodb://localhost/frontend-dev_test'
     }
   },
   production: {
@@ -20,7 +20,7 @@ var config = {
       port: 8080
     },
     database: {
-      url: 'mongodb://localhost/frontend-test'
+      url: 'mongodb://localhost/frontend-dev'
     }
   }
 };
