@@ -17,6 +17,7 @@
   </nav>
   <div class="container">
     <%- body %>
+    <% include index.ejs %>
   </div>
   <% if (settings.env === "development") { %>
     <script src="http://localhost:35729/livereload.js"></script>

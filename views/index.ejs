@@ -1,4 +1,4 @@
-<h1><%= title %></h1>
+<h1></h1>
 
 <table class="table table-bordered table-hover" id="dataTable">
 	<thead>
@@ -10,10 +10,10 @@
 	    </tr>
 	</thead>
 	 <tbody>
-	 	<% list.forEach(function(item)){ %> 
+	 	<% list.forEach(function(item){ %> 
 		 	<tr id="tr-id-1" class="tr-class-1">
 		 		<td>
-		 			<a href="<%= item.url %>"><img src="<%= item.image %> /></a>
+	 				<img src="<%= item.image %> />
 	 			</td>
 	 			<td><a href="<%= item.url %>"><%= item.title %></a></td>
 	 			
