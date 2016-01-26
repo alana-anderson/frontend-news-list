@@ -1,22 +1,25 @@
-<h1></h1>
 
-<table class="table table-bordered table-hover" id="dataTable">
+    <table class="table table-bordered table-hover" id="dataTable">
 	<thead>
 	    <tr>
-	        <th>Unpublished Articles ()</th>
+	        <th>Unpublished Articles ( )</th>
 	        <th>Author</th>
 	        <th>Words</th>
 	        <th>Submitted</th>
 	    </tr>
 	</thead>
 	 <tbody>
-	 	<% list.forEach(function(item){ %> 
+	   <% list.forEach(function(item){ %> 
 		 	<tr id="tr-id-1" class="tr-class-1">
 		 		<td>
-	 				<img src="<%= item.image %> />
+          <div class="col-md-1">
+            <img src="<%= item.image %>" height="60" width="60" />
+          </div>
+          <div class="col-md-11">
+            <a href="<%= item.url %>"><%= item.title %></a>
+          </div>
 	 			</td>
-	 			<td><a href="<%= item.url %>"><%= item.title %></a></td>
-	 			
+	 			<td><%= item.profile.first_name %> <%= item.profile.last_name %></td>
 	 			<td><%= item.words %></td>
 	 			<td><%= item.publish_at %></td>
 	        </tr>
