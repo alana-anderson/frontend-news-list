@@ -7,12 +7,14 @@ var indexRouter = express.Router();
 
 indexRouter.get('/', function (req, res) {
 	var articleLength = articleList.length;
-	res.render('layout', {list: articleList, amounts:articleLength});
+	// initially show 10
+	slicedList = articleList.slice(0,10);
+	res.render('layout', {list: slicedList, amounts:articleLength});
 });
 
-indexRouter.get('/:start/:end', function(req, res, next) {
+indexRouter.get('/api/articles/:start/:end', function(req, res, next) {
 	var itemList = {};
-	itemList['data'] = jsonData.data.slice(req.params.start, req.params.end);
+	itemList['data'] = jsonData.slice(req.params.start, req.params.end);
 	res.json(itemList);
 });
 
