@@ -1,5 +1,7 @@
 var article = require('../models/article');
 var jsonData = require('../public/resources/articles.json');
+var jsonMoreData = require('../public/resources/more-articles.json');
+var moment = require('moment');
 
 var articles = [];
 
@@ -9,7 +11,7 @@ function getJsonArticles() {
 		var title = data.title,
 			image = data.image,
 			url = data.url,
-			publish_at = data.publish_at,
+			publish_at = moment(data.publish_at).fromNow(),
 			profile =  data.profile,
 			words = data.words;
 

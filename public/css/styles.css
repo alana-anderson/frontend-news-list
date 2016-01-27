@@ -3,3 +3,25 @@ body {
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
 }
+th.red-header {
+  background: -moz-linear-gradient(top, #aa0013 0%, #7f0011 100%);
+  background: -webkit-linear-gradient(top, #aa0013 0%, #7f0011 100%);
+  background: linear-gradient(to bottom, #aa0013 0%, #7f0011 100%);
+  background: #aa0013;
+  border: 1px solid #792532!important;
+  color: white!important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aa0013', endColorstr='#7f0011', GradientType=0);
+  font-weight: bold!important;
+  padding: 20px 15px!important;
+  text-transform: uppercase;
+}
+tbody tr:nth-child(even) {
+  background: #f4f4f4;
+}
+tbody tr:nth-child(odd) {
+  background: #f8f8f8;
+}
+a {
+  color: #23587e;
+  font-weight: bold;
+}

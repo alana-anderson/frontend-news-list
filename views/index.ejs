@@ -1,28 +1,29 @@
 
     <table class="table table-bordered table-hover" id="dataTable">
-	<thead>
-	    <tr>
-	        <th>Unpublished Articles ( )</th>
-	        <th>Author</th>
-	        <th>Words</th>
-	        <th>Submitted</th>
-	    </tr>
-	</thead>
-	 <tbody>
-	   <% list.forEach(function(item){ %> 
-		 	<tr id="tr-id-1" class="tr-class-1">
-		 		<td>
-          <div class="col-md-1">
-            <img src="<%= item.image %>" height="60" width="60" />
-          </div>
-          <div class="col-md-11">
-            <a href="<%= item.url %>"><%= item.title %></a>
-          </div>
-	 			</td>
-	 			<td><%= item.profile.first_name %> <%= item.profile.last_name %></td>
-	 			<td><%= item.words %></td>
-	 			<td><%= item.publish_at %></td>
-	        </tr>
+    	<thead>
+    	    <tr>
+    	        <th class="red-header">Unpublished Articles ( <% list.length %> )</th>
+    	        <th class="red-header">Author</th>
+    	        <th class="red-header"">Words</th>
+    	        <th class="red-header">Submitted</th>
+    	    </tr>
+    	</thead>
+    	<tbody id="articles">
+    	   <% list.forEach(function(item){ %> 
+    		 	<tr>
+    		 		<td>
+                        <div class="col-md-1">
+                            <a href="<%= item.url %>"><img src="<%= item.image %>" height="50" width="50" /></a>
+                        </div>
+                        <div class="col-md-11">
+                            <h4><a href="<%= item.url %>"><%= item.title %></a></h4>
+                        </div>
+    	 			</td>
+    	 			<td><%= item.profile.first_name %> <%= item.profile.last_name %></td>
+    	 			<td><%= item.words %></td>
+    	 			<td><%= item.publish_at %></td>
+    	     </tr>
         <% }); %>
-    </tbody>
-</table>
+      </tbody>
+    </table>
+    <button type="button" id="loadMore" class="btn btn-default" aria-label="">Load more</button>
