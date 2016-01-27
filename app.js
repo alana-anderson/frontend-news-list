@@ -11,8 +11,7 @@ var express        = require('express'),
     favicon        = require('static-favicon'),
     methodOverride = require('method-override'),
     errorHandler   = require('errorhandler'),
-    config         = require('./config'),
-    routes         = require('./routes');
+    config         = require('./config');
 
 
 mongoose.connect(config.database.url);
@@ -22,8 +21,6 @@ mongoose.connection.on('error', function () {
 
 var app = express();
 
-
-
 /**
  * Express configuration.
  */
@@ -32,13 +29,13 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app
+  .use(require('./controllers'))
   .use(compress())
   .use(favicon())
   .use(logger('dev'))
   .use(bodyParser())
   .use(methodOverride())
   .use(express.static(path.join(__dirname, 'public')))
-  .use(routes.indexRouter)
   .use(function (req, res) {
     res.status(404).render('404', {title: 'Not Found :('});
   });

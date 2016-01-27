@@ -1,18 +1,19 @@
 var list = require('./data');
-var url = require('url');
 var jsonData = require('../public/resources/articles.json');
-var indexRouter = require('../routes');
+var express = require('express');
 
 var articleList = list.articles;
+var indexRouter = express.Router();
 
-
-exports.index = function (req, res) {
-	res.render('layout', {list: articleList});
-};
-
-/*indexRouter.get('/:start/:end', function(req, res, next) {
-  var itemList = {};
-  itemList['data'] = jsonData.data.slice(req.params.start, req.params.end);
-  res.json(itemList);
+indexRouter.get('/', function (req, res) {
+	var articleLength = articleList.length;
+	res.render('layout', {list: articleList, amounts:articleLength});
 });
-*/ // see about this tomorrow
+
+indexRouter.get('/:start/:end', function(req, res, next) {
+	var itemList = {};
+	itemList['data'] = jsonData.data.slice(req.params.start, req.params.end);
+	res.json(itemList);
+});
+
+module.exports = indexRouter;
