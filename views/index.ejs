@@ -1,11 +1,11 @@
-
+<div class="row">
     <table class="table table-bordered table-hover" id="dataTable">
-    	<thead>
+    	<thead class="red-header">
     	    <tr>
-    	        <th class="red-header" data-sortable="false">Unpublished Articles (<% if (amounts) { %><%= amounts %><% } %>)</th>
-    	        <th class="red-header" data-sortable="false">Author</th>
-    	        <th class="red-header"">Words</th>
-    	        <th class="red-header">Submitted</th>
+    	        <th data-sortable="false">Unpublished Articles (<% if (amounts) { %><%= amounts %><% } %>)</th>
+    	        <th data-sortable="false">Author</th>
+    	        <th>Words</th>
+    	        <th>Submitted</th>
     	    </tr>
     	</thead>
     	<tbody id="articles">
@@ -22,8 +22,11 @@
     	 			<td><%= item.profile.first_name %> <%= item.profile.last_name %></td>
     	 			<td><%= item.words %></td>
     	 			<td><%= item.publish_at %></td>
-    	     </tr>
+                </tr>
         <% }); %>
       </tbody>
     </table>
-    <button type="button" id="loadMore" class="btn btn-default" aria-label="">Load more</button>
+</div>
+<div class="row">
+    <button type="button" id="loadMore" class="btn btn-default full-width" aria-label="">Load more</button>
+</div>

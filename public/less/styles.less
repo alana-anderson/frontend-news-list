@@ -3,7 +3,7 @@ body {
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
 }
-th.red-header {
+thead.red-header {
 	background: -moz-linear-gradient(top, rgba(170,0,19,1) 0%, rgba(127,0,17,1) 100%);
 	background: -webkit-linear-gradient(top, rgba(170,0,19,1) 0%,rgba(127,0,17,1) 100%);
 	background: linear-gradient(to bottom, rgba(170,0,19,1) 0%,rgba(127,0,17,1) 100%);
@@ -14,7 +14,18 @@ th.red-header {
 	font-weight: bold!important;
 	padding: 20px 15px!important;
 	text-transform: uppercase;
+	tr {
+		th {
+			padding: 20px 15px;
+			border: 1px solid #792532!important;
+		}
+	}
 }
+
+.table.table-bordered.table-hover {
+	margin-bottom: -2px;
+}
+
 tbody {
 	tr {
 		&:nth-child(even) {
@@ -29,3 +40,4 @@ a {
 	color: #23587e;
 	font-weight: bold;
 }
+.full-width{ width: 100%;}

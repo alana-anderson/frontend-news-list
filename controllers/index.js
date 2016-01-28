@@ -6,7 +6,7 @@ var indexRouter = express.Router();
 
 indexRouter.get('/', function (req, res) {
 	var articleLength = articleList.length;
-	slicedList = articleList.slice(0,10); // initally show 10
+	var slicedList = articleList.slice(0,10); // initally show 10
 	res.render('layout', {list: slicedList, amounts:articleLength});
 });
 
