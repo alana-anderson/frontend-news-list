@@ -36,3 +36,14 @@ a {
 .full-width {
   width: 100%;
 }
+td.special-align {
+  line-height: 21px!important;
+  text-align: center;
+  vertical-align: middle!important;
+}
+.align-left {
+  text-align: left!important;
+}
+.align-right {
+  text-align: right!important;
+}

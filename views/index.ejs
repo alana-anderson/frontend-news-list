@@ -19,9 +19,9 @@
                             <h4><a href="<%= item.url %>"><%= item.title %></a></h4>
                         </div>
     	 			</td>
-    	 			<td><%= item.profile.first_name %> <%= item.profile.last_name %></td>
-    	 			<td><%= item.words %></td>
-    	 			<td><%= item.publish_at %></td>
+    	 			<td class="special-align align-left"><%= item.profile.first_name %> <%= item.profile.last_name %></td>
+    	 			<td class="special-align"><%= item.words %></td>
+    	 			<td class="special-align"><%= item.publish_at %></td>
                 </tr>
         <% }); %>
       </tbody>
