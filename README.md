@@ -30,6 +30,7 @@ Server will look to :
 - [Moment](http://momentjs.com/)
 - [DataTables](http://datatables.net/)
 - [LESS](http://lesscss.org/)
+- [Bootstrap](http://getbootstrap.com/)
 
 ## Known Issues
 Table sort sometimes prevents load more draw on windows
