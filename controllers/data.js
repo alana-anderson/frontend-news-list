@@ -3,11 +3,13 @@ var jsonData = require('../public/resources/articles.json');
 var jsonMoreData = require('../public/resources/more-articles.json');
 var moment = require('moment');
 
+var jsonTotalData = jsonData.concat(jsonMoreData);
+
 var articles = [];
 
 // get article list
 function getJsonArticles() {
-		jsonData.forEach(function(data){
+		jsonTotalData.forEach(function(data){
 		var title = data.title,
 			image = data.image,
 			url = data.url,

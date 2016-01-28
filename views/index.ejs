@@ -2,7 +2,7 @@
     <table class="table table-bordered table-hover" id="dataTable">
     	<thead>
     	    <tr>
-    	        <th class="red-header" data-sortable="false">Unpublished Articles ( <% amounts %> )</th>
+    	        <th class="red-header" data-sortable="false">Unpublished Articles (<% if (amounts) { %><%= amounts %><% } %>)</th>
     	        <th class="red-header" data-sortable="false">Author</th>
     	        <th class="red-header"">Words</th>
     	        <th class="red-header">Submitted</th>

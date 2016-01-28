@@ -1,6 +1,8 @@
 (function ($) {
 	$(document).ready(function () {
-		var i = 10; // load 10 at a time
+		var s = 11;
+		var i = 21; 
+
 		$('#loadMore').click(function(e){
 			e.preventDefault();
 			ajaxLoadMore();
@@ -8,15 +10,16 @@
 
 		function ajaxLoadMore(){
 			$.ajax({
-				url: '../resources/articles.json',
+				url: '/api/articles/'+ s + '/' + i + '/',
 				dataType: 'json',
 				type: 'get',
 				cache: false,
 				success: function(data) {
-					$(data).each(function(i,a){
+					$(data.data).each(function(i,a){
 						$('#articles').append('<tr><td><div class="col-md-1"><a href="'+a.url+'"><img src="'+a.image+' " height="50" width="50"/></a></div><div class="col-md-11"><h4><a href="'+a.url+'">'+ a.title+'</a></h4></div></td><td>'+a.profile.first_name+' '+a.profile.last_name+'</td><td>'+a.words+'</td><td>'+a.publish_at+'</td></tr>');
 					});
-					i = i+10;
+					s = s+10;
+					i = i+9;
 				}
 			});
 		}
