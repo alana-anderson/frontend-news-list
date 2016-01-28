@@ -21,6 +21,7 @@ thead.red-header tr th {
 }
 .table.table-bordered.table-hover {
   margin-bottom: -2px;
+  overflow: hidden;
 }
 tbody tr:nth-child(even) {
   background: #f4f4f4;
