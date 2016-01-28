@@ -15,6 +15,10 @@ run the following commands:
 gulp
 node app.js
 ```
+Server will look to :
+```
+127.0.0.1:3000
+```
 
 ## Tools / Plugins / Libraries
 - [Gulp](http://gulpjs.com/)
