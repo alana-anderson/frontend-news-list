@@ -28,6 +28,6 @@ node app.js
 - [LESS](http://lesscss.org/)
 
 ## Known Issues
-Table sort sometimes prevents load more draw
+Table sort sometimes prevents load more draw on windows
 
 Camel casing ignored to ahere to json naming conventions
