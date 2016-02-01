@@ -7,8 +7,9 @@ var jsonTotalData = jsonData.concat(jsonMoreData);
 
 var articles = [];
 
-// get article list
-function getJsonArticles() {
+var Data = {
+	getJsonArticles: function() {
+		var articles = [];
 		jsonTotalData.forEach(function(data){
 		var title = data.title,
 			image = data.image,
@@ -21,11 +22,9 @@ function getJsonArticles() {
 			var item = new article(title, image, url, publish_at, profile, words);
 			articles.push(item);
 			//console.log(item);
-	});
-}
+		});
+		return articles;
+	}
+};
 
-// invoke
-getJsonArticles();
-
-// send article list
-module.exports = {articles: articles};
+module.exports = Data;

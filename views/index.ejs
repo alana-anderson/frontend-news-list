@@ -1,32 +1,28 @@
-<div class="row">
-    <table class="table table-bordered table-hover" id="dataTable">
-    	<thead class="red-header">
-    	    <tr>
-    	        <th data-sortable="false">Unpublished Articles (<% if (amounts) { %><%= amounts %><% } %>)</th>
-    	        <th data-sortable="false">Author</th>
-    	        <th>Words</th>
-    	        <th>Submitted</th>
-    	    </tr>
-    	</thead>
-    	<tbody id="articles">
-    	   <% list.forEach(function(item){ %> 
-    		 	<tr>
-    		 		<td>
-                        <div class="col-md-1">
-                            <a href="<%= item.url %>"><img src="<%= item.image %>" height="50" width="50" /></a>
-                        </div>
-                        <div class="col-md-11">
-                            <h4><a href="<%= item.url %>"><%= item.title %></a></h4>
-                        </div>
-    	 			</td>
-    	 			<td class="special-align align-left"><%= item.profile.first_name %> <%= item.profile.last_name %></td>
-    	 			<td class="special-align"><%= item.words %></td>
-    	 			<td class="special-align"><%= item.publish_at %></td>
-                </tr>
+<table class="table table-bordered table-hover" id="dataTable">
+    <thead class="red-header">
+        <tr>
+            <th>Unpublished Articles (<% if (amounts) { %><%= amounts %><% } %>)</th>
+            <th class="set-width">Author</th>
+            <th class="tblsort">Words</th>
+            <th class="subsort">Submitted</th>
+        </tr>
+    </thead>
+    <tbody id="articles">
+       <% list.forEach(function(item){ %> 
+            <tr>
+                <td>
+                    <div class="col-md-1">
+                        <a href="<%= item.url %>"><img src="<%= item.image %>" height="60" width="60" /></a>
+                    </div>
+                    <div class="col-md-11">
+                        <a href="<%= item.url %>"><h4 class="table-text"><%= item.title %></h4></a>
+                    </div>
+                </td>
+                <td class="special-align align-left"><%= item.profile.first_name %> <%= item.profile.last_name %></td>
+                <td class="special-align"><%= item.words %></td>
+                <td class="special-align"><%= item.publish_at %></td>
+            </tr>
         <% }); %>
-      </tbody>
-    </table>
-</div>
-<div class="row">
-    <button type="button" id="loadMore" class="btn btn-default full-width" aria-label="">Load more</button>
-</div>
+    </tbody>
+</table>
+<button type="button" id="loadMore" class="btn btn-default full-width" aria-label="">Load more</button>

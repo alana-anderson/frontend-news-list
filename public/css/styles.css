@@ -41,9 +41,18 @@ td.special-align {
   text-align: center;
   vertical-align: middle!important;
 }
+th.set-width {
+  width: 145px!important;
+}
+th.tblsort {
+  cursor: pointer!important;
+}
 .align-left {
   text-align: left!important;
 }
 .align-right {
   text-align: right!important;
+}
+h4.table-text {
+  margin-left: 15px!important;
 }

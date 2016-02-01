@@ -6,7 +6,6 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     minifyCss = require('gulp-minify-css'),
     rename = require('gulp-rename'),
-    concat =  require('gulp-concat'),
     livereload = require('gulp-livereload');
 
 // config to hold the path files
