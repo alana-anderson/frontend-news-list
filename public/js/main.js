@@ -57,7 +57,7 @@
 			});
 		}
 
-		function ajaxSortTable(){
+		function ajaxSortTable(sortToggled){
 			var direction = (sortToggled === true) ? 'asc' : 'desc';
 			var route = '/api/articles/0/' + i + '?sort=true&direction=' + direction;
 
@@ -70,7 +70,7 @@
 					var content = '';
 					$(data.data).each(function(i,a){
 						content += '<tr>';
-						content += '<td><div class="col-md-1"><a href="'+a.url+'">'+'<img src="'+a.image+'" height="60" width="60"/></a></div><div class="col-md-11"><a href="'+a.url+'"><h4 class="table-text">'+ a.title+'</a></h4></div></td>';
+						content += '<td><div class="col-md-1"><a href="'+a.url+'">'+'<img src="'+a.image+'" height="60" width="60"/></a></div><div class="col-md-11"><h4 class="table-text"><a href="'+a.url+'">'+ a.title+'</a></h4></div></td>';
 						content += '<td class="special-align align-left">'+a.profile.first_name+' '+a.profile.last_name+'</td>';
 						content += '<td class="special-align">'+a.words+'</td>';
 						content += '<td class="special-align">'+a.publish_at+'</td>';
