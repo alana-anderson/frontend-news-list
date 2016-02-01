@@ -4,13 +4,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 thead.red-header {
-  background: -moz-linear-gradient(top, #aa0013 0%, #7f0011 100%);
-  background: -webkit-linear-gradient(top, #aa0013 0%, #7f0011 100%);
-  background: linear-gradient(to bottom, #aa0013 0%, #7f0011 100%);
-  background: #aa0013;
-  border: 1px solid #792532!important;
-  color: white!important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aa0013', endColorstr='#7f0011', GradientType=0);
+  background: #ac3c4a;
+  background: -moz-linear-gradient(top, #ac3c4a 0%, #7d2a36 100%);
+  background: -webkit-linear-gradient(top, #ac3c4a 0%, #7d2a36 100%);
+  background: linear-gradient(to bottom, #ac3c4a 0%, #7d2a36 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ac3c4a', endColorstr='#7d2a36', GradientType=0);
   font-weight: bold!important;
   padding: 20px 15px!important;
   text-transform: uppercase;
@@ -18,6 +16,7 @@ thead.red-header {
 thead.red-header tr th {
   padding: 20px 15px;
   border: 1px solid #792532!important;
+  color: white!important;
 }
 .table.table-bordered.table-hover {
   margin-bottom: -2px;
