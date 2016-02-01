@@ -8,7 +8,7 @@
 
 		// if previous sort session localStorage will take effect
 		// on first load, sort the table
-		if (sortToggled){
+		if (sortToggled !== undefined){
 			ajaxSortTable(sortToggled);
 		}
 
