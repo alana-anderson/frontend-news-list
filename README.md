@@ -1,4 +1,4 @@
-# frontend-dev-test
+# frontend-news-list
 Frontend developer competency test. This will be a function single-page app where the user will retrieve all articles and display in table format.
 
 ## To build the project
